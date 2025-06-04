@@ -1,4 +1,19 @@
+Prompt - gemini 2.5 pro
+1. Recreate the UI as a single React function component (PricingCard.tsx) using TypeScript and TailwindCSS.
+2. Props must be: plan: string price: string features: string[] isFeatured?: boolean
+3. Behaviour: stack vertically < 640 px, hover elevation on desktop(the card should slightly "jump" on hover and during keyboard navigation), full keyboard focus ring(the user should be able to navigate between the entire card and the button; both should have the same "jump" effect as on hover).
+4. No inline styles; use Tailwind only.
+5. Get just the TSX inside tsx fences. 
+
+Pricing card should be a separate component. Also provide me App.tsx that should looks like as attached image. cards should have no border radius, no gap between cards, pay attention to cards background color, buttons background color should be the same as card background color. Pay attention, that the center card is larger in size than the side cards - it is elongated up and down, making it visually dominant and accentuating the user's attention(very important requirement)
+
+
+
 # React + TypeScript + Vite
+
+    
+
+
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
