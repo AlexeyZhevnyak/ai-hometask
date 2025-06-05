@@ -1,4 +1,4 @@
-Prompt - gemini 2.5 pro
+Prompt - gemini 2.5 pro(with attached screenshot)
 1. Recreate the UI as a single React function component (PricingCard.tsx) using TypeScript and TailwindCSS.
 2. Props must be: plan: string price: string features: string[] isFeatured?: boolean
 3. Behaviour: stack vertically < 640 px, hover elevation on desktop(the card should slightly "jump" on hover and during keyboard navigation), full keyboard focus ring(the user should be able to navigate between the entire card and the button; both should have the same "jump" effect as on hover).
