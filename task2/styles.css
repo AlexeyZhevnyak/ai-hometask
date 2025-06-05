@@ -7,9 +7,17 @@
 .menu {
     display: flex;
     gap: 2rem;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
 }
 
-@media (max-width: 767px) {
+.menu li {
+    cursor: pointer;
+    padding: 0.5rem 1rem;
+}
+
+@media (max-width: 768px) {
     .menu {
         flex-direction: column;
         position: absolute;
@@ -19,9 +27,28 @@
         background: #fff;
         transform: translateY(-150%);
         transition: .3s ease;
+        z-index: 10;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        padding: 1rem 0;
     }
 
     .menu.open {
         transform: translateY(0);
+    }
+
+    .menu li {
+        width: 100%;
+        text-align: center;
+        padding: 1rem;
+    }
+
+    .hamburger {
+        position: relative;
+        z-index: 20;
+        cursor: pointer;
+        padding: 0.5rem 1rem;
+        background: none;
+        border: 1px solid #ccc;
+        border-radius: 4px;
     }
 }
