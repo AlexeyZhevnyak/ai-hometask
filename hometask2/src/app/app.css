@@ -1,0 +1,14 @@
+/* App component styles */
+:host {
+  display: block;
+  width: 100%;
+  min-height: 100vh;
+}
+
+.app-container {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  min-height: 100vh;
+  background-color: #f8f9fa;
+}

@@ -1,0 +1,52 @@
+<div class="user-list-container">
+  <h1>User Management</h1>
+
+  <div class="table-container">
+    <table class="user-table">
+      <thead>
+        <tr>
+          <th>Name / Email</th>
+          <th>Address</th>
+          <th>Phone</th>
+          <th>Website</th>
+          <th>Company</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        @for (user of users; track trackByUserId) {
+          <tr (click)="openUserDetail(user)" class="user-row">
+            <td class="user-info">
+              <div class="user-name">{{ user.name }}</div>
+              <div class="user-email">{{ user.email }}</div>
+            </td>
+            <td>{{ user.address.city }}, {{ user.address.street }}</td>
+            <td>{{ user.phone }}</td>
+            <td><a href="https://{{ user.website }}" target="_blank" rel="noopener">{{ user.website }}</a></td>
+            <td>{{ user.company.name }}</td>
+            <td>
+              <button
+                class="delete-btn"
+                (click)="deleteUser($event, user.id)"
+                aria-label="Delete user">
+                Delete
+              </button>
+            </td>
+          </tr>
+        }
+        @empty {
+          <tr>
+            <td colspan="6" class="no-data">No users found</td>
+          </tr>
+        }
+      </tbody>
+    </table>
+  </div>
+
+  <!-- User Detail Modal -->
+  <app-user-details-modal
+    [user]="selectedUser"
+    [open]="showModal"
+    (close)="closeModal()"
+  ></app-user-details-modal>
+</div>
